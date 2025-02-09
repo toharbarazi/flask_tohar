@@ -5,7 +5,7 @@ pipeline {
         stage('Checkout') {
             steps {
                 // משלב את הקוד מריפוזיטוריית Git
-                git 'https://github.com/toharbarazi/flask_tohar.git'
+                git branch: 'main', url: 'https://github.com/toharbarazi/flask_tohar.git'
             }
         }
         
