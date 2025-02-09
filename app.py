@@ -17,6 +17,11 @@ def add_user():
     users.append(user)
     return jsonify(user), 201
 
+# הוספת endpoint נוסף עבור ה-GET request הראשי (למנוע 404 בבדיקות)
+@app.route('/', methods=['GET'])
+def home():
+    return "Hello, World!"
+
 if __name__ == '__main__':
     app.run(debug=True)
 
